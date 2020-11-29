@@ -28,6 +28,7 @@ namespace Snake
             while (true)
             {
                 Console.CursorVisible = false;
+
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo inputInfo = Console.ReadKey();
@@ -134,6 +135,7 @@ namespace Snake
             for(int i = 0; i < snakeElements.Count; i++)
             {
                 Position position = snakeElements[i];
+
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.SetCursorPosition(position.Col, position.Row);
 
@@ -159,7 +161,6 @@ namespace Snake
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.SetCursorPosition(position.Col, position.Row);
                     Console.Write("*");
                 }
             }
