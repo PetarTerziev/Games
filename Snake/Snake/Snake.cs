@@ -27,6 +27,7 @@ namespace Snake
 
             while (true)
             {
+                Console.CursorVisible = false;
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo inputInfo = Console.ReadKey();
@@ -93,13 +94,13 @@ namespace Snake
 
                 DrawFood(food);
 
-                sleepTime -= 0.01;
+                sleepTime -= 0.05;
 
                 Thread.Sleep((int)sleepTime);
             }
         }
 
-        struct Position
+        class Position
         {
             public Position(int row, int col)
             {
